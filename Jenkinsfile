@@ -24,7 +24,7 @@ pipeline{
         }
     stage('Deploy'){
         steps{
-            deploy adapters: [tomcat9(credentialsId: 'admin', url: 'https://github.com/rlfhrdyd/Spring_v1.git')], contextPath: null, war: 'path/to/war'
+            deploy adapters: [tomcat9(credentialsId: 'admin', url: 'https://github.com/rlfhrdyd/Spring_v1.git')], contextPath: null, war: 'target/hello-world.war'
         }
     }
     }
