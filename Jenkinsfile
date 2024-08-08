@@ -1,8 +1,10 @@
 pipeline {
-    agent any
+    agent{
+        label "jenkins-node"
+    }
 
     triggers {
-        pollSCM('* * * * *') // 매 5분마다 체크
+        pollSCM('* * * * *') 
     }
 
     stages {
